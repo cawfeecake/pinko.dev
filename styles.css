@@ -1,0 +1,63 @@
+html {
+  background: linear-gradient(110deg, #4a74e8 60%, #5ba8a8 60%);
+  background-attachment: fixed; /* continues the gradient to bottom of page (from https://stackoverflow.com/a/31712795) */
+}
+
+h1, h2, li {
+  font-family: Tahoma;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  color: #ff8000;
+  font-size: 800%;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+h2, li {
+  color: white;
+}
+
+h2 {
+  font-style: italic;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+ul {
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li + li::before {
+  content: "|";
+  /* to disallow underlining on hover like parent element (from https://stackoverflow.com/a/20405045) */
+  margin: 0;
+  padding: 4px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* remove default <a></a> styling (from https://stackoverflow.com/a/20809090) */
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+  /*cursor: auto;*/ /* here in case li:hover{ cursor: pointer } is removed */
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
